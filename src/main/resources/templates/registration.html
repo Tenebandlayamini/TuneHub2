@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>register page</title>
+	<link rel="stylesheet" th:href="@{/css/Style.css}">
+	
+
+</head>
+
+<body>
+	
+	<div class="container">
+
+		<form  class="form signup" action="register" method="post">
+
+			<h2>Sign Up</h2>
+
+			<div class="input-container">
+
+				<label for="signup-username">Username </label>
+				<input type="text" name="username" id="signup-username" required />
+				<i class="fa-regular fa-user"></i>
+
+			</div>
+
+			<div class="input-container">
+
+				<label for="signup-email">Email Address </label>
+				<input type="email" name="email" id="signup-email" required />
+				<i class="fa-regular fa-envelope"></i>
+
+			</div>
+
+			<div class="input-container">
+
+				<label for="signup-password">Create Password</label>
+
+				<input type="password" id="signup-password" name="password" required>
+
+				<i class="fa-solid fa-lock"></i>
+
+			</div>
+
+			<div class="input-container">
+				< <label for="confirm-password">Confirm Password</label>
+
+					<input type="password" id="confirm-password" name="password" required>
+
+					<i class="fa-solid fa-lock"></i>
+
+			</div>
+			<div class="input-container">
+				< <label for="role">Gender</label>
+
+					Male<input type="radio" id="gender" name="gender" value="male" required/>
+					Female<input type="radio" id="gender" name="gender" value="female" required/>
+					Others<input type="radio" id="gender" name="gender" value="other" required/>
+
+					<i class="fa-solid fa-lock"></i>
+
+			</div>
+
+			<div class="input-container">
+				< <label for="role">Role</label>
+
+					Admin<input type="radio" id="role" name="role" value="admin" required/>
+					Customer<input type="radio" id="role" name="role" value="customer" required/>
+
+					<i class="fa-solid fa-lock"></i>
+
+			</div>
+			<div class="input-container">
+				< <label for="address">Address</label>
+
+					<input type="text" id="address" name="address" required>
+
+					<i class="fa-solid fa-lock"></i>
+
+			</div>
+
+			<div class="input-container">
+
+				<input type="submit" value="Create Account">
+
+			</div>
+
+			<p>Already a member? <a href="login" class="login">Log in</a></p>
+
+		</form>
+</body>
+
+</html>
