@@ -79,6 +79,22 @@ function verifyPayment(orderId, paymentId, signature) {
              console.error("Error:", error);
          });
 }
+
+function verifyPayment(orderId, paymentId, signature) {
+     $.post("/verify", { orderId: orderId, paymentId: paymentId, signature: signature })
+         .done(function(isValid) {
+             if (isValid) {
+                 alert("Payment successful");
+                 window.location.href = 'payment-success';
+             } else {
+                 alert("Payment failed");
+                 window.location.href = 'payment-failure';
+             }
+         })
+         .fail(function(error) {
+             console.error("Error:", error);
+         });
+}
 </script>
 </body>
 </html>
